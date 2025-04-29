@@ -1,0 +1,81 @@
+# top-most EditorConfig file
+root = true
+
+# Default settings for all files
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 2
+
+# Markdown files - no trimming whitespace to allow intentional formatting
+[*.md]
+trim_trailing_whitespace = false
+insert_final_newline = true
+
+# YAML files - often 2 spaces indentation
+[*.{yml,yaml}]
+indent_style = space
+indent_size = 2
+
+# JSON files - consistent indentation
+[*.json]
+indent_style = space
+indent_size = 2
+insert_final_newline = true
+
+# JavaScript and TypeScript files
+[*.{js,jsx,ts,tsx}]
+indent_style = space
+indent_size = 4
+insert_final_newline = true
+
+# CSS and SCSS files
+[*.{css,scss,less}]
+indent_style = space
+indent_size = 2
+
+# HTML files
+[*.html]
+indent_style = space
+indent_size = 4
+
+# Shell scripts
+[*.{sh,bash}]
+end_of_line = lf
+charset = utf-8
+indent_style = space
+indent_size = 2
+insert_final_newline = true
+
+# Ignore minified files
+[*.min.{js,css}]
+insert_final_newline = false
+trim_trailing_whitespace = false
+
+# Git ignore files
+[.gitignore]
+trim_trailing_whitespace = false
+
+# Special case: Makefiles require tabs
+[Makefile]
+indent_style = tab
+
+# Dockerfiles
+[Dockerfile]
+indent_style = space
+indent_size = 2
+
+# XML files (including Android manifests, etc.)
+[*.xml]
+indent_style = space
+indent_size = 2
+
+# Python files (por si en el futuro aprendes)
+[*.py]
+indent_style = space
+indent_size = 4
+insert_final_newline = true
+trim_trailing_whitespace = true
