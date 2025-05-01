@@ -3,7 +3,7 @@ import "./src/components/hello-user.js";
 import "./src/components/simple-counter.js"
 import "./src/components/counter-app.js"
 
-class MyFirstComponent extends LitElement {
+class LitComponent extends LitElement {
     static styles = css`
         p {
             color: blue;
@@ -21,4 +21,4 @@ class MyFirstComponent extends LitElement {
     }
 }
 
-customElements.define("my-first-component", MyFirstComponent);
+customElements.define("lit-component", LitComponent);
