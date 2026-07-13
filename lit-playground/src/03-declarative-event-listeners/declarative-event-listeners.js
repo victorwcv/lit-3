@@ -1,4 +1,8 @@
-import {LitElement, html} from 'lit';
+import { LitElement, html } from 'lit';
+
+/**
+ * @fires declarative-event-listeners dispatch a custom event
+ */
 
 export class DeclarativeEventListeners extends LitElement {
   static properties = {
@@ -13,6 +17,7 @@ export class DeclarativeEventListeners extends LitElement {
   changeName(event) {
     const input = event.target;
     this.name = input.value
+    this.dispatchEvent(new CustomEvent('declarative-event-listeners', { detail: true }));
   }
 
   render() {
