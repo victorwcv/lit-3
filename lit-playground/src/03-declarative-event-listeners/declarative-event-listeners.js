@@ -14,6 +14,13 @@ export class DeclarativeEventListeners extends LitElement {
     this.name = 'Your name here';
   }
 
+  firstUpdated() {
+    this.renderRoot.getElementById("myInput").focus();
+  }
+
+  updated() {
+  }
+
   changeName(event) {
     const input = event.target;
     this.name = input.value
@@ -23,7 +30,7 @@ export class DeclarativeEventListeners extends LitElement {
   render() {
     return html`
       <p>Hello, ${this.name}</p>
-      <input @input="${this.changeName}" placeholder="Enter your name">
+      <input id="myInput" @input="${this.changeName}" placeholder="Enter your name">
     `;
   }
 }
